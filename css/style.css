@@ -1,263 +1,154 @@
-/**All**/
-*{
-	font-family: 'Raleway', sans-serif;
-}
-
-/** Header **/
-.header{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 100%;
-  margin: auto;
-  border-bottom: 3px solid #7d97ad;
-  margin-bottom: 1em;
-}
-.logo{
-  padding-top: 1.25em;
-	align-self: center;
-}
-.logo-img{
-  width: 3em;
-}
-.title {
-  text-transform: uppercase;
-  font-weight: 100;
-  color: #2d3c49;
-}
-.designation {
-  font: bold 1em/1.2 'Raleway', sans-serif;
-  color: #7d97ad;
-  text-align: right;
-}
-
-/** Main **/
-#main-part {
-	max-width: 100%;
-	display: block;
-	padding-bottom: 1em;
-    box-shadow: 0 0 15px 0 #dee2e8;
-    margin: auto;
-}
-.main-image {
-  display: flex;
-  width: 100%;
-}
-.banner-img{
-    width: 100%;
-    height: 450px;
-}
-.container, section .main-box {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.featured-work {
-	padding-top: 1em;
-    padding-left: 1em;
-	font: bold 1.5em 'Raleway', sans-serif;
-    color: #7d97ad;
-}
-
-/**Fetured Box Design**/
-.featured-box {
+*{font-family: 'Chivo', sans-serif;}
+/**Twitter Card Design**/
+.twitter-box {
   width: 300px;
-  padding: 10px;
-  box-shadow: 0 0 15px 0 #dee2e8;
   margin: 0 auto;
+  position: relative;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 0 #dee2e8;
 }
-.featured-box:hover{
+.twitter-box:after, .twitter-box:before {
+	top: 100%;
+	left: 15%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.twitter-box:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: #fff;
+	border-width: 6px;
+	margin-left: -6px;
+}
+.twitter-box:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-top-color: #dee2e8;
+	border-width: 7px;
+	margin-left: -7px;
+}
+
+.twitter-box:hover {
     box-shadow: 0 0 20px 0 #000;
-    border-radius: 10px;
 }
-.featured-title {
-  font-size: 20px;
-  text-transform: uppercase;
-  text-align: center;
-}
-.featured-image {
+
+/**Background Image**/
+.twitter-image {
   display: block;
-  width: 300px;
+  width: 100%;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
-.featured-link{
-    text-align: center;
-    color:#02b3e4;
+
+/**Logo Image**/
+.twitter-logo {
+    width: 70px;
+    border-radius: 50%;
+    margin-top: -2.5em;
+    padding: 10px;
+    
+}
+
+/**Twitter Inner Box Design**/
+.twitter-inner-box {
+    padding: 10px 15px 10px 15px;
+}
+
+/**Twitter Follow Button**/
+.twitter-button {
+    float: right;
+    margin: 15px;
+    border: 1px solid #02b3e4;
+    background: transparent;
+    width: 85px;
+    height: 27px;
+    border-radius: 30px;
+    color: #02b3e4;
+    font-size: 12px;
+    padding-top:5px; 
     font-weight: bold;
+}
+
+.twitter-button:hover{
+    background-color: #e6faff;
+    cursor: pointer;
+}
+
+/**Udacity India Twitter Hnadler**/
+.twitter-title {
+  font-size: 20px;
+  margin: 0px;
+}
+
+.twitter-title:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.twitter-username {
+    margin: 0px;
+    font-weight: 100;
+    color: #657786;
     font-size: 15px;
 }
 
-/** Footer **/
-.footer {
-	max-width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-    margin: auto;
+.twitter-username:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
-.credit{
-    color:#02b3e4;
-    text-align: center;
-    font-size: 20px;
+
+.twitter-caps {
+    text-transform: uppercase;
+}
+
+.twitter-text {
+    color: #3b4148;
+    font-size: 14px;
+}
+
+/**Twitter Figure Box**/
+.twitter-figure {
     width: 100%;
+}
+
+.twitter-fig {
+    max-width: 33.3%;
+    float: left;
+    margin-right: 2em;
+}
+
+.figure-title {
+    margin: 0px;
+    color:#657786;
+    font-size: 12px; 
+}
+
+.figure-title:hover{
+    color: #02b3e4;
+}
+
+.figure-number {
+    color:#02b3e4;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0px;
+}
+
+/**Twitter Followes**/
+.twitter-follow {
+    font-size: 12px;
+    margin-top: 60px;
     margin-bottom: 0px;
 }
-.program{
-    margin-top: 0px;
-    color: #2d3c49;
-    text-align: center;
-    width: 100%;
-    font-weight: bold;
+
+.twitter-follow a {
+    text-decoration: none;
+    color: #02b3e4;
 }
 
-/**media query**/
-@media screen and (max-width:350px){
-    .logo-img {
-        width: 2em;
-    }
-    .title{
-        font-size: 1.3em;
-        margin-bottom: 0em; 
-    }
-    .designation{
-        font-size: 0.7em;
-        margin-top: 0em; 
-    }
-    .banner-img {
-        height:150px;
-    }
-    .featured-work{
-        text-align: center;
-        padding-left: 0em;
-    }
-    .featured-box{
-        width: 220px;
-        margin-bottom: 10px;
-    }
-    .featured-image{
-        width: 220px;
-    }
-    .featured-title{
-        font-size: 1em;
-    }
-    .featured-link{
-        font-size: 12px;
-    }
-    .credit{
-        font-size: 1em;
-    }
-    .program{
-        font-size: 0.7em;
-    }
-}
-
-@media screen and (min-width:351px){
-    .logo-img {
-        width: 2.8em;
-    }
-    .title{
-        font-size: 2em;
-        margin-bottom: 0em; 
-    }
-    .designation{
-        font-size: 1em;
-        margin-top: 0em; 
-    }
-    .banner-img {
-        height:230px;
-    }
-    .featured-work{
-        text-align: center;
-        padding-left: 0em;
-    }
-    .featured-box{
-        width: 300px;
-        margin-bottom: 10px;
-    }
-    .credit{
-        font-size: 1.2em;
-    }
-    .program{
-        font-size: 0.8em;
-    }
-}
-
-@media screen and (min-width:700px){
-    .logo-img {
-        width: 3em;
-    }
-    .title{
-        font-size: 2.3em;
-        margin-bottom: 0em; 
-    }
-    .designation{
-        font-size: 1em;
-        margin-top: 0em; 
-    }
-    .banner-img {
-        height:300px;
-    }
-    .featured-work{
-        text-align: center;
-        padding-left: 0em;
-    }
-    .featured-title{
-        font-size: 1.2em;
-    }
-    .featured-link{
-        font-size: 15px;
-    }
-    .credit{
-        font-size: 1.2em;
-    }
-    .program{
-        font-size: 1em;
-    }
-}
-
-@media screen and (min-width:850px){
-    .logo-img {
-        width: 3.5em;
-    }
-    .title{
-        font-size: 2.5em;
-        margin-bottom: 0em; 
-    }
-    .designation{
-        margin-top: 0em;
-        font-size: 1em;
-    }
-    .banner-img {
-        height:450px;
-    }
-    .featured-work{
-        padding-left: 1em;
-        text-align: left;
-    }
-    .featured-box{
-        width: 300px;
-        margin-bottom: 10px;
-    }
-    .featured-image{
-        width: 300px;
-    }
-    .featured-title{
-        font-size: 1.2em;
-    }
-    .featured-link{
-        font-size: 15px;
-    }
-    .credit{
-        font-size: 1.5em;
-    }
-    .program{
-        font-size: 1.2em;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-  .header, #main-part, .footer {
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.twitter-follow a:hover {
+    text-decoration: underline;
 }
